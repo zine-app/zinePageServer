@@ -13,6 +13,6 @@ app.use(async (ctx, next) => {
   await next()
 })
 
-app.listen(PORT);
+app.listen(PORT)
 
-console.log(`listening on port ${PORT}`);
+console.log(`listening on port ${PORT}`)
