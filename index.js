@@ -2,7 +2,7 @@ const Koa = require('koa')
 const app = new Koa()
 const PORT = process.env.PORT || 3000
 
-app.use(async function (ctx, next) {
+app.use(async (ctx, next) => {
   const ua = ctx.headers['user-agent']
 
   if (/^(facebookexternalhit)|(Twitterbot)|(Pinterest)/gi.test(ua)) {
