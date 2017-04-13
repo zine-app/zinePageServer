@@ -1,0 +1,19 @@
+{
+  "name": "zine-page-server",
+  "version": "1.0.0",
+  "description": "page server for zine app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zine-app/zinePageServer.git"
+  },
+  "author": "gary ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zine-app/zinePageServer/issues"
+  },
+  "homepage": "https://github.com/zine-app/zinePageServer#readme"
+}
