@@ -22,6 +22,22 @@
   },
   "homepage": "https://github.com/zine-app/zinePageServer#readme",
   "dependencies": {
-    "koa": "^2.2.0"
+    "jade": "^1.11.0",
+    "koa": "^2.2.0",
+    "koa-accesslog": "0.0.2",
+    "koa-router": "^7.1.1",
+    "koa-views": "^6.0.1"
+  },
+  "ava": {
+    "concurrency": 5,
+    "verbose": true,
+    "failFast": true,
+    "source": [
+      "tests/**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "superkoa": "^1.0.2"
   }
 }
