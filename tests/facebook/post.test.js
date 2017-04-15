@@ -9,12 +9,14 @@ test('get', async t => {
 
   t.is(200, res.status)
 
+  const facebookAppId = /<meta property="fb:app_id" content=".+?">/
   const facebookMetaURLRegex = /<meta property="og:url" content=".+?">/
   const facebookMetaTypeRegex = /<meta property="og:type" content=".+?">/
   const facebookMetaTitleRegex = /<meta property="og:title" content=".+?">/
-  const facebookMetaImageRegex = /<meta property="og:image:url" content=".+?">/
+  const facebookMetaImageRegex = /<meta property="og:image" content=".+?">/
   const facebookMetaDescriptionRegex = /<meta property="og:description" content=".+?">/
 
+  t.truthy(facebookAppId.test(res.text))
   t.truthy(facebookMetaURLRegex.test(res.text))
   t.truthy(facebookMetaTypeRegex.test(res.text))
   t.truthy(facebookMetaTitleRegex.test(res.text))

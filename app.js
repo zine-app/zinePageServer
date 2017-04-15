@@ -12,6 +12,7 @@ const interceptWebCrawler = async (ctx, next) => {
 
   if (/^(facebookexternalhit)|(Twitterbot)|(Pinterest)/gi.test(ua)) {
     return await ctx.render('webcrawler', {
+      facebookAppId: config.facebookAppId,
       url: ctx.request.origin + ctx.request.url,
       type: 'article',
       title: 'www.zine.media',
