@@ -12,7 +12,7 @@ test('get', async t => {
   const facebookMetaURLRegex = /<meta property="og:url" content=".+?">/
   const facebookMetaTypeRegex = /<meta property="og:type" content=".+?">/
   const facebookMetaTitleRegex = /<meta property="og:title" content=".+?">/
-  const facebookMetaImageRegex = /<meta property="og:image" content=".+?">/
+  const facebookMetaImageRegex = /<meta property="og:image:url" content=".+?">/
   const facebookMetaDescriptionRegex = /<meta property="og:description" content=".+?">/
 
   t.truthy(facebookMetaURLRegex.test(res.text))
