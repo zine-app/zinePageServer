@@ -12,7 +12,7 @@ const interceptWebCrawler = async (ctx, next) => {
 
   if (/^(facebookexternalhit)|(Twitterbot)|(Pinterest)/gi.test(ua)) {
     return await ctx.render('webcrawler', {
-      url: ctx.request.url,
+      url: ctx.request.origin + ctx.request.url,
       type: 'article',
       title: 'www.zine.media',
       description: 'A fresh way to discover and create content online',
