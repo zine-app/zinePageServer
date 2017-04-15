@@ -16,7 +16,7 @@ const interceptWebCrawler = async (ctx, next) => {
       type: 'article',
       title: 'www.zine.media',
       description: 'A fresh way to discover and create content online',
-      images: 'http://res.cloudinary.com/quillapp/image/upload/v1492190923/zine/socialMediaImage.jpg'
+      image: 'http://res.cloudinary.com/quillapp/image/upload/v1492190923/zine/socialMediaImage.jpg'
     })
   }
 
