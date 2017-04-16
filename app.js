@@ -19,12 +19,12 @@ const interceptWebCrawler = async (ctx, next) => {
 
     if(ctx.params.postId) {
       const response = await request(`${config.zineAPI}/post?_id=${ctx.params.postId}`)
-      const post = JSON.parse(response)
+      // const post = JSON.parse(response)
 
-      title = post.title
+      title = response.title
       type = 'article'
-      description = post.description || ''
-      image = post.body.entityMap[0] && post.body.entityMap[0].data.url || ''
+      description = response.description || ''
+      image = response.body.entityMap[0] && response.body.entityMap[0].data.url || ''
     }
 
 
