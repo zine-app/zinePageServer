@@ -1,9 +1,23 @@
-const superkoa = require('superkoa')
+const SandboxedModule = require('sandboxed-module')
+const app = SandboxedModule.require('../../app', {
+  requires: {
+    "request-promise-native": url => new Promise(resolve => {
+      if(url === 'stub_test_server/post?_id=test_post_id') {
+        resolve(JSON.stringify({
+          title: 'test_title',
+          description: 'test_description',
+        }))
+      }
+    })
+  }
+})
+
+const agent = require('supertest-koa-agent')
 const test = require('ava')
 
 
 test('get', async t => {
-  const res = await superkoa(__dirname + '/../../app.js')
+  const res = await agent(app)
     .get('/test_blog_name/post/test_post_id')
     .set('User-Agent', 'facebookexternalhit')
 

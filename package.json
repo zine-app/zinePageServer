@@ -8,7 +8,7 @@
     "npm": "4.3.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ZINE_API=stub_test_server ava",
     "start": "node index.js"
   },
   "repository": {
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "ava": "^0.19.1",
-    "superkoa": "^1.0.2"
+    "sandboxed-module": "^2.0.3",
+    "supertest-koa-agent": "^0.3.0"
   }
 }
