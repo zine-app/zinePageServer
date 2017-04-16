@@ -24,7 +24,7 @@ const interceptWebCrawler = async (ctx, next) => {
       title = post.title
       type = 'article'
       description = post.description || ''
-      image = post.body.entityMap[0] && post.body.entityMap[0].url || ''
+      image = post.coverImageUrl || ''
     }
 
 
